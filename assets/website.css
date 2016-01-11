@@ -1,0 +1,8 @@
+iframe {
+  width: 100%;
+  border: 1px solid #DEDEDE;
+}
+
+section.normal pre {
+  line-height: 1.275em;
+}

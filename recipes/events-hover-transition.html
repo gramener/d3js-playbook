@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>d3 Barchart</title>
+  <script src="js/d3.v3.min.js"></script>
+  <style type="text/css">
+  body { margin: 0px; }
+  </style>
+</head>
+<body>
+  <svg width="200" height="300"></svg>
+<script>
+var data = [120, 140, 100, 130, 150, 130, 190, 150, 190, 110,
+            110, 140, 120, 100, 170, 120, 120, 160, 120, 180]
+var chart = d3.select('svg')
+
+var rects = chart.selectAll('rect')
+  .data(data).enter()
+  .append('rect')
+  .attr('x', 0)
+  .attr('y', function(d,i) {return i * 15})
+  .attr('width', function(d) {return d})
+  .attr('height', 14)
+
+var labels = chart.selectAll("text")
+  .data(data)
+  .enter()
+  .append("text")
+  .text(function(d) {return d})
+  .attr("y", function(d,i) {return i*15 + 10})
+  .attr("x", function(d) {return d - 20})
+  .attr("font-family", "sans-serif")
+  .attr("font-size", "10px")
+  .attr("fill", "white")
+
+rects.on("click", function(d) {
+  console.log(d)
+})
+
+rects.on("mouseover", function(d) {
+  d3.select(this)
+    .attr("fill" , "rgb(0,"+d+",0)")
+})
+
+rects.on("mouseout", function(d) {
+  d3.select(this)
+    .transition()
+    .duration(1200)
+    .attr("fill", "black")
+})
+</script>
+</body>
+</html>

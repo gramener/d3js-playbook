@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>d3 Barchart</title>
+  <script src="js/d3.v3.min.js"></script>
+  <style type="text/css">
+  body { margin: 0px; }
+  </style>
+</head>
+<body>
+  <svg></svg>
+<script>
+var data = [12, 14, 15, 18]
+var chart = d3.select('svg').selectAll('rect')
+  .data(data).enter()
+  .append('rect')
+  .attr('x', 0)
+  .attr('y', function(d,i) {return i * 30})
+  .attr('width', function(d) {return d})
+  .attr('height', 25)
+
+d3.select('svg').selectAll("text")
+  .data(data)
+  .enter()
+  .append("text")
+  .text(function(d) {return d})
+  .attr("y", function(d,i) {return i*30 + 20})
+  .attr("x", function(d) {return d})
+</script>
+</body>
+</html>

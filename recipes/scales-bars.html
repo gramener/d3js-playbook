@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>d3 Barchart</title>
+  <script src="js/d3.v3.min.js"></script>
+  <style type="text/css">
+  body { margin: 0px; }
+  </style>
+</head>
+<body>
+  <svg></svg>
+<script>
+// instead of [120, 140, 150, 180]
+var data = [12, 14, 15, 18]
+
+var scale = d3.scale.linear()
+              .domain([0, d3.max(data)])
+              .range([0, 250])
+
+var chart = d3.select('svg').selectAll('rect')
+  .data(data).enter()
+  .append('rect')
+  .attr('x', 0)
+  .attr('y', function(d,i) {return i * 30})
+  .attr('width', function(d) {return scale(d)}) // scale
+  .attr('height', 25)
+
+d3.select('svg').selectAll("text")
+  .data(data)
+  .enter()
+  .append("text")
+  .text(function(d) {return d})
+  .attr("y", function(d,i) {return i*30 + 20})
+  .attr("x", function(d) {return scale(d)})     // scale
+</script>
+</body>
+</html>
