@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Event Listeners | D3.js Playbook</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.6">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="./assets/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="./tooltips.html" />
+    
+    
+    <link rel="prev" href="./manipulation.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="17"
+        data-chapter-title="Event Listeners"
+        data-filepath="events.md"
+        data-basepath="."
+        data-revision="Thu Jan 07 2016 22:28:47 GMT+0530 (India Standard Time)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="web.html">
+            
+                
+                    <a href="./web.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Web Programming
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="svg.html">
+            
+                
+                    <a href="./svg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Scalable Vector Graphics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="css.html">
+            
+                
+                    <a href="./css.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Cascading Style Sheets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="js.html">
+            
+                
+                    <a href="./js.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="d3intro.html">
+            
+                
+                    <a href="./d3intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        D3.js Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="binding.html">
+            
+                
+                    <a href="./binding.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Data Binding
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="createsvg.html">
+            
+                
+                    <a href="./createsvg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Creating SVG
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="barchart.html">
+            
+                
+                    <a href="./barchart.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Bar Chart
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="scatter.html">
+            
+                
+                    <a href="./scatter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Scatter Plot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="scales.html">
+            
+                
+                    <a href="./scales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Scales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="axes.html">
+            
+                
+                    <a href="./axes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Axes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="updates.html">
+            
+                
+                    <a href="./updates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Updates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="transitions.html">
+            
+                
+                    <a href="./transitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Transitions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="files.html">
+            
+                
+                    <a href="./files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Reading Files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="exercises.html">
+            
+                
+                    <a href="./exercises.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Exercises
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="manipulation.html">
+            
+                
+                    <a href="./manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Data Manipulations
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="17" data-path="events.html">
+            
+                
+                    <a href="./events.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Event Listeners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="tooltips.html">
+            
+                
+                    <a href="./tooltips.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Tooltips
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="layouts.html">
+            
+                
+                    <a href="./layouts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        D3 Layouts
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="19.1" data-path="layouts/pie.html">
+            
+                
+                    <a href="./layouts/pie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.1.</b>
+                        
+                        Pie Charts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.2" data-path="layouts/stack.html">
+            
+                
+                    <a href="./layouts/stack.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.2.</b>
+                        
+                        Stack Layout
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.3" data-path="layouts/force.html">
+            
+                
+                    <a href="./layouts/force.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.3.</b>
+                        
+                        Force Layout
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >D3.js Playbook</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="event-listeners">Event Listeners</h1>
+<p>Event Listeners listen for specific events being triggered on specific DOM elements.</p>
+<p>Remember, we did something like?</p>
+<pre><code class="lang-javascript">d3.select(<span class="hljs-string">&quot;p&quot;</span>)
+  .on(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// Do something on click</span>
+  <span class="hljs-comment">// Remember, we drew random barcharts?</span>
+})
+</code></pre>
+<p>We just <em>binded</em> an Event Listener to the <em>p</em> element.
+This piece of code listens for any <em>click event</em> triggered when the user clicks on </p><p> element.</p>
+<p>Events can &quot;click&quot;, &quot;mouseover&quot;, or &quot;submit&quot; or any <a href="https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events" target="_blank">DOM event type</a> supported by your browser</p>
+<p>Let&apos;s take our age-old barchart</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> data = [<span class="hljs-number">120</span>, <span class="hljs-number">140</span>, <span class="hljs-number">100</span>, <span class="hljs-number">130</span>, <span class="hljs-number">150</span>, <span class="hljs-number">130</span>, <span class="hljs-number">190</span>, <span class="hljs-number">150</span>, <span class="hljs-number">190</span>, <span class="hljs-number">110</span>,
+            <span class="hljs-number">110</span>, <span class="hljs-number">140</span>, <span class="hljs-number">120</span>, <span class="hljs-number">100</span>, <span class="hljs-number">170</span>, <span class="hljs-number">120</span>, <span class="hljs-number">120</span>, <span class="hljs-number">160</span>, <span class="hljs-number">120</span>, <span class="hljs-number">180</span>]
+<span class="hljs-keyword">var</span> chart = d3.select(<span class="hljs-string">&apos;svg&apos;</span>)
+
+<span class="hljs-keyword">var</span> rects = chart.selectAll(<span class="hljs-string">&apos;rect&apos;</span>)
+  .data(data).enter()
+  .append(<span class="hljs-string">&apos;rect&apos;</span>)
+  .attr(<span class="hljs-string">&apos;x&apos;</span>, <span class="hljs-number">0</span>)
+  .attr(<span class="hljs-string">&apos;y&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d,i</span>) </span>{<span class="hljs-keyword">return</span> i * <span class="hljs-number">15</span>})
+  .attr(<span class="hljs-string">&apos;width&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> d})
+  .attr(<span class="hljs-string">&apos;height&apos;</span>, <span class="hljs-number">14</span>)
+
+<span class="hljs-keyword">var</span> labels = chart.selectAll(<span class="hljs-string">&quot;text&quot;</span>)
+  .data(data)
+  .enter()
+  .append(<span class="hljs-string">&quot;text&quot;</span>)
+  .text(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> d})
+  .attr(<span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d,i</span>) </span>{<span class="hljs-keyword">return</span> i*<span class="hljs-number">15</span> + <span class="hljs-number">10</span>})
+  .attr(<span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> d - <span class="hljs-number">20</span>})
+  .attr(<span class="hljs-string">&quot;font-family&quot;</span>, <span class="hljs-string">&quot;sans-serif&quot;</span>)
+  .attr(<span class="hljs-string">&quot;font-size&quot;</span>, <span class="hljs-string">&quot;10px&quot;</span>)
+  .attr(<span class="hljs-string">&quot;fill&quot;</span>, <span class="hljs-string">&quot;white&quot;</span>)
+</code></pre>
+<iframe src="recipes/events.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+<h1 id="add-click-event">Add click event</h1>
+<p>to rectangles print the datum under it and change the color to green-ish</p>
+<pre><code class="lang-javascript">rects.on(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(d)
+  d3.select(<span class="hljs-keyword">this</span>)
+    .attr(<span class="hljs-string">&quot;fill&quot;</span> , <span class="hljs-string">&quot;rgb(0,&quot;</span>+d+<span class="hljs-string">&quot;,0)&quot;</span>)
+})
+</code></pre>
+<iframe src="recipes/events-click.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+<h1 id="add-hover-event">Add hover event</h1>
+<pre><code class="lang-javascript">rects.on(<span class="hljs-string">&quot;mouseover&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+  d3.select(<span class="hljs-keyword">this</span>)
+    .attr(<span class="hljs-string">&quot;fill&quot;</span> , <span class="hljs-string">&quot;rgb(0,&quot;</span>+d+<span class="hljs-string">&quot;,0)&quot;</span>)
+})
+</code></pre>
+<iframe src="recipes/events-hover-incomplete.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+<p>But, everything changes to green color, doesn&apos;t quite look like hover, so we need do the following.</p>
+<h1 id="add-hover-out">Add hover out</h1>
+<pre><code class="lang-javascript">rects.on(<span class="hljs-string">&quot;mouseover&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+  d3.select(<span class="hljs-keyword">this</span>)
+    .attr(<span class="hljs-string">&quot;fill&quot;</span> , <span class="hljs-string">&quot;rgb(0,&quot;</span>+d+<span class="hljs-string">&quot;,0)&quot;</span>)
+})
+
+rects.on(<span class="hljs-string">&quot;mouseout&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+  d3.select(<span class="hljs-keyword">this</span>)
+    .attr(<span class="hljs-string">&quot;fill&quot;</span> , <span class="hljs-string">&quot;black&quot;</span>)
+})
+</code></pre>
+<iframe src="recipes/events-hover-complete.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+<h1 id="add-transition">Add transition</h1>
+<p>To make it, look like we are playing colorful music!</p>
+<pre><code class="lang-javascript">rects.on(<span class="hljs-string">&quot;mouseover&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+  d3.select(<span class="hljs-keyword">this</span>)
+    .attr(<span class="hljs-string">&quot;fill&quot;</span> , <span class="hljs-string">&quot;rgb(0,&quot;</span>+d+<span class="hljs-string">&quot;,0)&quot;</span>)
+})
+
+rects.on(<span class="hljs-string">&quot;mouseout&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+  d3.select(<span class="hljs-keyword">this</span>)
+    .transition()
+    .duration(<span class="hljs-number">1200</span>)
+    .attr(<span class="hljs-string">&quot;fill&quot;</span>, <span class="hljs-string">&quot;black&quot;</span>)
+})
+</code></pre>
+<iframe src="recipes/events-hover-transition.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./manipulation.html" class="navigation navigation-prev " aria-label="Previous page: Data Manipulations"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./tooltips.html" class="navigation navigation-next " aria-label="Next page: Tooltips"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

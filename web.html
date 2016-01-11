@@ -1,0 +1,569 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Web Programming | D3.js Playbook</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.6">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="./assets/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="./svg.html" />
+    
+    
+    <link rel="prev" href="./index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="Web Programming"
+        data-filepath="web.md"
+        data-basepath="."
+        data-revision="Thu Jan 07 2016 22:28:47 GMT+0530 (India Standard Time)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="web.html">
+            
+                
+                    <a href="./web.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Web Programming
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="svg.html">
+            
+                
+                    <a href="./svg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Scalable Vector Graphics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="css.html">
+            
+                
+                    <a href="./css.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Cascading Style Sheets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="js.html">
+            
+                
+                    <a href="./js.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="d3intro.html">
+            
+                
+                    <a href="./d3intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        D3.js Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="binding.html">
+            
+                
+                    <a href="./binding.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Data Binding
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="createsvg.html">
+            
+                
+                    <a href="./createsvg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Creating SVG
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="barchart.html">
+            
+                
+                    <a href="./barchart.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Bar Chart
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="scatter.html">
+            
+                
+                    <a href="./scatter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Scatter Plot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="scales.html">
+            
+                
+                    <a href="./scales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Scales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="axes.html">
+            
+                
+                    <a href="./axes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Axes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="updates.html">
+            
+                
+                    <a href="./updates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Updates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="transitions.html">
+            
+                
+                    <a href="./transitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Transitions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="files.html">
+            
+                
+                    <a href="./files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Reading Files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="exercises.html">
+            
+                
+                    <a href="./exercises.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Exercises
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="manipulation.html">
+            
+                
+                    <a href="./manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Data Manipulations
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="events.html">
+            
+                
+                    <a href="./events.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Event Listeners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="tooltips.html">
+            
+                
+                    <a href="./tooltips.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Tooltips
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="layouts.html">
+            
+                
+                    <a href="./layouts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        D3 Layouts
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="19.1" data-path="layouts/pie.html">
+            
+                
+                    <a href="./layouts/pie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.1.</b>
+                        
+                        Pie Charts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.2" data-path="layouts/stack.html">
+            
+                
+                    <a href="./layouts/stack.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.2.</b>
+                        
+                        Stack Layout
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.3" data-path="layouts/force.html">
+            
+                
+                    <a href="./layouts/force.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.3.</b>
+                        
+                        Force Layout
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >D3.js Playbook</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="web-programming">Web Programming</h1>
+<p>This chapter contains a quick introduction to the various elements that make the web work.</p>
+<h2 id="clients-and-servers">Clients and Servers</h2>
+<p><img src="assets/client-server.png" alt="Clients and Servers"></p>
+<p>In a typical client/server <em>conversation</em> on Internet, the server contains files and HTTP server. And, the client (usually a web browser) requests the file from server via HTTP Request. When the request reaches the web server, the HTTP server (software) sends the requested file back, also through HTTP as response.</p>
+<h2 id="urls">URLs</h2>
+<p>Web-pages and other files that are accessible though the Internet are identified by URLs (<em>Universal Resource Locators</em>). A basic <code>URL</code> looks like this:
+<img src="assets/url.png" alt="URL"></p>
+<h2 id="html">HTML</h2>
+<p>The content and the structure of every web page is written in a language called HyperText Markup Language or HTML for short.</p>
+<p>A basic <code>.html</code> file looks like this:</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>This is a title<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p>A more complete <code>.html</code> file would look like:</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>This is a title<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;script.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;style.css&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;start&quot;</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example&quot;</span>&gt;</span>Let&apos;s explore!<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p><code>&lt;!DOCTYPE html&gt;</code> The standard document type declaration. The doctype declaration tells the browser that this page is written in HTML5.</p>
+<p><code>html</code> The html tag indicates that everything between <html> and </html> is code that conforms to the standards of the type of HTML dictated by the doctype declaration &#x2013; in this case HTML5.</p>
+<p><code>head</code> contains all metadata about the document, such as its title and any references to external stylesheets (css) and scripts (js).</p>
+<p><code>title</code> of the document, typically displayed at the top of the browser window.</p>
+<p><code>body</code> tag contains the code that generates what is seen in a browser.</p>
+<p><code>p, div, span, a, h1 ul li , etc</code> are HTML elements that comprise the nodes of every document, which form a tree structure, called the Document Object Model (DOM) tree.</p>
+<h3 id="attributes">Attributes</h3>
+<p>All HTML elements can be assigned attributes by including attribute/value pairs</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">tag</span> <span class="hljs-attribute">attribute</span>=<span class="hljs-value">&quot;value&quot;</span>&gt;</span>content to be modified by the tag<span class="hljs-tag">&lt;/<span class="hljs-title">tag</span>&gt;</span>
+</code></pre>
+<h3 id="classes-and-ids">Classes and IDs</h3>
+<p>Classes and IDs are useful attributes, as they are used as selectors by CSS and JavaScript to identify elements.</p>
+<h2 id="css">CSS</h2>
+<p>Visual representation and styling of a document&apos;s structure is taken by Cascading Style Sheets or CSS for short.</p>
+<p>A basic <code>.css</code> file looks like this:</p>
+<pre><code class="lang-css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">10px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fff</span></span></span>;
+}</span>
+<span class="hljs-tag">h1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+}</span>
+</code></pre>
+<h2 id="javascript">JavaScript</h2>
+<p>While HTML defines a webpage&apos;s structure and content, CSS styles the appearance of document, JavaScript adds interactivity to webpages.</p>
+<p>JavaScript is the scripting language of the Web, enabling us to make pages dynamic by manipulating the DOM after a page has already loaded in the browser.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./svg.html" class="navigation navigation-next " aria-label="Next page: Scalable Vector Graphics"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

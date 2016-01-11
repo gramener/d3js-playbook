@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Axes | D3.js Playbook</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.6">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="./assets/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="./updates.html" />
+    
+    
+    <link rel="prev" href="./scales.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="11"
+        data-chapter-title="Axes"
+        data-filepath="axes.md"
+        data-basepath="."
+        data-revision="Thu Jan 07 2016 22:28:47 GMT+0530 (India Standard Time)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="web.html">
+            
+                
+                    <a href="./web.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Web Programming
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="svg.html">
+            
+                
+                    <a href="./svg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Scalable Vector Graphics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="css.html">
+            
+                
+                    <a href="./css.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Cascading Style Sheets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="js.html">
+            
+                
+                    <a href="./js.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="d3intro.html">
+            
+                
+                    <a href="./d3intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        D3.js Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="binding.html">
+            
+                
+                    <a href="./binding.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Data Binding
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="createsvg.html">
+            
+                
+                    <a href="./createsvg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Creating SVG
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="barchart.html">
+            
+                
+                    <a href="./barchart.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Bar Chart
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="scatter.html">
+            
+                
+                    <a href="./scatter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Scatter Plot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="scales.html">
+            
+                
+                    <a href="./scales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Scales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="11" data-path="axes.html">
+            
+                
+                    <a href="./axes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Axes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="updates.html">
+            
+                
+                    <a href="./updates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Updates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="transitions.html">
+            
+                
+                    <a href="./transitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Transitions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="files.html">
+            
+                
+                    <a href="./files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Reading Files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="exercises.html">
+            
+                
+                    <a href="./exercises.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Exercises
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="manipulation.html">
+            
+                
+                    <a href="./manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Data Manipulations
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="events.html">
+            
+                
+                    <a href="./events.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Event Listeners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="tooltips.html">
+            
+                
+                    <a href="./tooltips.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Tooltips
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="layouts.html">
+            
+                
+                    <a href="./layouts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        D3 Layouts
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="19.1" data-path="layouts/pie.html">
+            
+                
+                    <a href="./layouts/pie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.1.</b>
+                        
+                        Pie Charts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.2" data-path="layouts/stack.html">
+            
+                
+                    <a href="./layouts/stack.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.2.</b>
+                        
+                        Stack Layout
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.3" data-path="layouts/force.html">
+            
+                
+                    <a href="./layouts/force.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.3.</b>
+                        
+                        Force Layout
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >D3.js Playbook</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="axes">Axes</h1>
+<p>Given a data and Scales, the <code>d3.svg.axis()</code> Axes component creates a horizontal-axis or/and vertical-axis.</p>
+<p>Axis function can be setup like</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xaxis = d3.svg.axis()
+</code></pre>
+<p>You can provide sclae from previously defined xcale.</p>
+<pre><code class="lang-javascript">xaxis.scale(xscale)
+</code></pre>
+<p>or</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xaxis = d3.svg.axis()
+          .scale(xscale)
+</code></pre>
+<p>also provide position like:</p>
+<pre><code class="lang-javascript">xaxis.orient(<span class="hljs-string">&quot;bottom&quot;</span>)
+</code></pre>
+<p>To generate the axis and into SVG, we must call the xaxis function:</p>
+<pre><code class="lang-javascript">svg.append(<span class="hljs-string">&quot;g&quot;</span>)
+    .call(xaxis)
+</code></pre>
+<h2 id="add-axis-to-scatterplot">Add Axis to Scatterplot</h2>
+<pre><code class="lang-javascript"><span class="hljs-comment">//Define X axis</span>
+<span class="hljs-keyword">var</span> xaxis = d3.svg.axis()
+          .scale(xscale)
+          .orient(<span class="hljs-string">&quot;bottom&quot;</span>)
+          .ticks(<span class="hljs-number">5</span>)
+<span class="hljs-comment">//Define Y axis</span>
+<span class="hljs-keyword">var</span> yaxis = d3.svg.axis()
+          .scale(yscale)
+          .orient(<span class="hljs-string">&quot;left&quot;</span>)
+          .ticks(<span class="hljs-number">5</span>)
+<span class="hljs-comment">//Create X axis</span>
+svg.append(<span class="hljs-string">&quot;g&quot;</span>)
+  .attr(<span class="hljs-string">&quot;class&quot;</span>, <span class="hljs-string">&quot;axis&quot;</span>)
+  .attr(<span class="hljs-string">&quot;transform&quot;</span>, <span class="hljs-string">&quot;translate(0,&quot;</span> + (height - padding) + <span class="hljs-string">&quot;)&quot;</span>)
+  .call(xaxis)
+<span class="hljs-comment">//Create Y axis</span>
+svg.append(<span class="hljs-string">&quot;g&quot;</span>)
+  .attr(<span class="hljs-string">&quot;class&quot;</span>, <span class="hljs-string">&quot;axis&quot;</span>)
+  .attr(<span class="hljs-string">&quot;transform&quot;</span>, <span class="hljs-string">&quot;translate(&quot;</span> + padding + <span class="hljs-string">&quot;,0)&quot;</span>)
+  .call(yaxis)
+</code></pre>
+<iframe src="recipes/scatter-aob-saxis.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./scales.html" class="navigation navigation-prev " aria-label="Previous page: Scales"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./updates.html" class="navigation navigation-next " aria-label="Next page: Updates"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

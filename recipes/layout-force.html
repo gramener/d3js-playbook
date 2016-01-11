@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>d3 Network</title>
+  <script src="js/d3.v3.min.js"></script>
+  <style type="text/css">
+  body { margin: 0px; }
+  svg { border: 1px solid black; }
+  </style>
+</head>
+<body>
+<script>
+// width and height
+var width = 500
+var height = 300
+// data
+var data = {
+  nodes: [
+    {name: "Sachin"},
+    {name: "Murali"},
+    {name: "Glenn McGrath"},
+    {name: "AB de Villiers"},
+    {name: "Akram"},
+    {name: "BCCI"}
+  ],
+  edges: [
+    {source: 0, target: 1},
+    {source: 0, target: 2},
+    {source: 2, target: 3},
+    {source: 2, target: 4},
+    {source: 3, target: 4}
+  ]
+}
+// init a force layout, using the nodes and edges in dataset
+var force = d3.layout.force()
+           .nodes(data.nodes)
+           .links(data.edges)
+           .size([width, height])
+           .linkDistance([50])
+           .charge([-100])
+           .start()
+// define 10 random colors
+var colors = d3.scale.category10()
+// create SVG
+var svg = d3.select("body")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+// create edges
+var edges = svg.selectAll("line")
+  .data(data.edges)
+  .enter()
+  .append("line")
+  .style("stroke", "#ccc")
+  .style("stroke-width", 2)
+// create nodes
+var nodes = svg.selectAll("circle")
+  .data(data.nodes)
+  .enter()
+  .append("circle")
+  .attr("r", 6)
+  .style("fill", function(d, i) { return colors(i) })
+  .call(force.drag)
+// On every tick" event, re-render
+force.on("tick", function() {
+  edges.attr("x1", function(d) { return d.source.x })
+       .attr("y1", function(d) { return d.source.y })
+       .attr("x2", function(d) { return d.target.x })
+       .attr("y2", function(d) { return d.target.y })
+
+  nodes.attr("cx", function(d) { return d.x })
+       .attr("cy", function(d) { return d.y })
+})
+</script>
+</body>
+</html>

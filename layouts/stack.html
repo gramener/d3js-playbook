@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Stack Layout | D3.js Playbook</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.6">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../assets/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../layouts/force.html" />
+    
+    
+    <link rel="prev" href="../layouts/pie.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="19.2"
+        data-chapter-title="Stack Layout"
+        data-filepath="layouts/stack.md"
+        data-basepath=".."
+        data-revision="Thu Jan 07 2016 22:28:47 GMT+0530 (India Standard Time)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="web.html">
+            
+                
+                    <a href="../web.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Web Programming
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="svg.html">
+            
+                
+                    <a href="../svg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Scalable Vector Graphics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="css.html">
+            
+                
+                    <a href="../css.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Cascading Style Sheets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="js.html">
+            
+                
+                    <a href="../js.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="d3intro.html">
+            
+                
+                    <a href="../d3intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        D3.js Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="binding.html">
+            
+                
+                    <a href="../binding.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Data Binding
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="createsvg.html">
+            
+                
+                    <a href="../createsvg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Creating SVG
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="barchart.html">
+            
+                
+                    <a href="../barchart.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Bar Chart
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="scatter.html">
+            
+                
+                    <a href="../scatter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Scatter Plot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="scales.html">
+            
+                
+                    <a href="../scales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Scales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="axes.html">
+            
+                
+                    <a href="../axes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Axes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="updates.html">
+            
+                
+                    <a href="../updates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Updates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="transitions.html">
+            
+                
+                    <a href="../transitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Transitions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="files.html">
+            
+                
+                    <a href="../files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Reading Files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="exercises.html">
+            
+                
+                    <a href="../exercises.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Exercises
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="manipulation.html">
+            
+                
+                    <a href="../manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Data Manipulations
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="events.html">
+            
+                
+                    <a href="../events.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Event Listeners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="tooltips.html">
+            
+                
+                    <a href="../tooltips.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Tooltips
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="layouts.html">
+            
+                
+                    <a href="../layouts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        D3 Layouts
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="19.1" data-path="layouts/pie.html">
+            
+                
+                    <a href="../layouts/pie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.1.</b>
+                        
+                        Pie Charts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="19.2" data-path="layouts/stack.html">
+            
+                
+                    <a href="../layouts/stack.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.2.</b>
+                        
+                        Stack Layout
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19.3" data-path="layouts/force.html">
+            
+                
+                    <a href="../layouts/force.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.3.</b>
+                        
+                        Force Layout
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >D3.js Playbook</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="stack-layout">Stack Layout</h1>
+<p><code>d3.layout.stack()</code> takes two-dimensioanl data and generates stacked data.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// data = [{country:&quot;USA&quot;, gold:10, silver:20}, {country:&quot;China&quot;, gold:20, silver:100}, ... ,]</span>
+<span class="hljs-comment">// transform this data to</span>
+stackdata = [<span class="hljs-string">&quot;gold&quot;</span>, <span class="hljs-string">&quot;silver&quot;</span>].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">c</span>) </span>{
+  <span class="hljs-keyword">return</span> data.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d,i</span>) </span>{
+    <span class="hljs-keyword">return</span> {x:i, y:d[c]} })
+  })
+</code></pre>
+<p>You can try this out in console</p>
+<p><img src="../assets/stack-console.png" alt="pie"></p>
+<p>Now, on passing <code>stackeddata</code> to <code>d3.layout.stack()</code>.</p>
+<p><img src="../assets/stack-d3-console.png" alt="pie"></p>
+<p>In the stacked data, each object has been given a <code>y0</code> value. This is the baseline value.</p>
+<h1 id="draw-stacked-data">Draw Stacked Data</h1>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Create SVG</span>
+<span class="hljs-keyword">var</span> svg = d3.select(<span class="hljs-string">&quot;body&quot;</span>)
+  .append(<span class="hljs-string">&quot;svg&quot;</span>)
+  .attr(<span class="hljs-string">&quot;width&quot;</span>, <span class="hljs-number">250</span>)
+  .attr(<span class="hljs-string">&quot;height&quot;</span>, <span class="hljs-number">250</span>)
+<span class="hljs-comment">// Set up stack method</span>
+<span class="hljs-keyword">var</span> stack = d3.layout.stack()
+<span class="hljs-comment">// Data, stacked</span>
+stack(stackdata)
+<span class="hljs-comment">// gold silver colors</span>
+<span class="hljs-keyword">var</span> colors = [<span class="hljs-string">&quot;gold&quot;</span>, <span class="hljs-string">&quot;silver&quot;</span>]
+<span class="hljs-comment">// Add a group for each row of data</span>
+<span class="hljs-keyword">var</span> groups = svg.selectAll(<span class="hljs-string">&quot;g&quot;</span>)
+  .data(stackdata)
+  .enter()
+  .append(<span class="hljs-string">&quot;g&quot;</span>)
+  .style(<span class="hljs-string">&quot;fill&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d, i</span>) </span>{ <span class="hljs-keyword">return</span> colors[i]})
+<span class="hljs-comment">// Add a rect for each data value</span>
+<span class="hljs-keyword">var</span> rects = groups.selectAll(<span class="hljs-string">&quot;rect&quot;</span>)
+  .data(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> d})
+  .enter()
+  .append(<span class="hljs-string">&quot;rect&quot;</span>)
+  .attr(<span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d, i</span>) </span>{<span class="hljs-keyword">return</span> i*<span class="hljs-number">28</span>})
+  .attr(<span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> d.y0})
+  .attr(<span class="hljs-string">&quot;height&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> d.y})
+  .attr(<span class="hljs-string">&quot;width&quot;</span>, <span class="hljs-number">24</span>)
+</code></pre>
+<iframe src="../recipes/layout-stack.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+<p>Adjust the Y positions</p>
+<pre><code class="lang-javascript">.attr(<span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> d.y0})
+<span class="hljs-comment">// to</span>
+.attr(<span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{<span class="hljs-keyword">return</span> <span class="hljs-number">250</span>-(d.y0+d.y)})
+</code></pre>
+<iframe src="../recipes/layout-stack-reverse.html" sandbox="allow-same-origin allow-scripts" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+2+&apos;px&apos;;"></iframe>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../layouts/pie.html" class="navigation navigation-prev " aria-label="Previous page: Pie Charts"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../layouts/force.html" class="navigation navigation-next " aria-label="Next page: Force Layout"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

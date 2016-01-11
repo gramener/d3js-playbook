@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>d3 Scatter</title>
+  <script src="js/d3.v3.min.js"></script>
+  <style type="text/css">
+  body { margin: 0px; }
+  svg { border: 1px solid black; }
+  .axis path, .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+  }
+  .axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+  }
+  .tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: #000;
+    color: #fff;
+  }
+  </style>
+</head>
+<body>
+<div id="tooltip"></div>
+<script>
+var data = [
+  {country:"USA", gold:10, silver:20},
+  {country:"China", gold:20, silver:100},
+  {country:"India", gold:200, silver:50},
+  {country:"Russia", gold:25, silver:80},
+  {country:"Germany", gold:10, silver:200},
+  {country:"UK", gold:150, silver:75},
+  {country:"France", gold:10, silver:70},
+  {country:"UAE", gold:30, silver:150},
+  {country:"Canada", gold:100, silver:15}
+]
+var width = 600
+var height = 300
+var padding = 30
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+//Define X scale
+var xscale = d3.scale.linear()
+           .domain([0, d3.max(data, function(d) {return d.gold})])
+           .range([padding, width - padding * 2])
+//Define Y scale
+var yscale = d3.scale.linear()
+           .domain([0, d3.max(data, function(d) {return d.silver})])
+           .range([height - padding, padding])
+//Define X axis
+var xaxis = d3.svg.axis()
+          .scale(xscale)
+          .orient("bottom")
+          .ticks(5)
+//Define Y axis
+var yaxis = d3.svg.axis()
+          .scale(yscale)
+          .orient("left")
+          .ticks(5)
+//draw points
+var circles = svg.selectAll("circle")
+   .data(data).enter()
+   .append("circle")
+   .attr("cx", function(d) {return xscale(d.gold)})
+   .attr("cy", function(d) {return yscale(d.silver)})
+   .attr("r", function(d) {
+     return Math.sqrt(d.gold*d.gold+d.silver*d.silver)/20
+   })
+   .attr("fill", function(d) {
+     return "rgb("+d.gold+","+d.silver+",0)"
+   })
+//labels
+svg.selectAll("text")
+  .data(data).enter()
+  .append("text")
+   .attr("x", function(d) {return xscale(d.gold)+10})
+   .attr("y", function(d) {return yscale(d.silver)+4})
+  .text(function(d) {return d.country})
+  .attr("font-size", "12px")
+//Create X axis
+svg.append("g")
+  .attr("class", "axis")
+  .attr("transform", "translate(0," + (height - padding) + ")")
+  .call(xaxis)
+//Create Y axis
+svg.append("g")
+  .attr("class", "axis")
+  .attr("transform", "translate(" + padding + ",0)")
+  .call(yaxis)
+
+// Define the div for the tooltip
+var tip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0)
+// Add events to tip
+circles.on("mouseover", function(d) {
+  tip.style("opacity", 1)
+     .html(d.country + "<br/> Gold: " + d.gold + "<br/> Silver: " + d.silver)
+     .style("left", (d3.event.pageX-25) + "px")
+     .style("top", (d3.event.pageY-75) + "px")
+  })
+  .on("mouseout", function(d) {
+    tip.style("opacity", 0)
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>d3 Scatter</title>
+  <script src="js/d3.v3.min.js"></script>
+  <style type="text/css">
+  body { margin: 0px; }
+  svg { border: 1px solid black; }
+  </style>
+</head>
+<body>
+<script>
+var data = [
+  [10, 20], [20, 100], [200, 50],
+  [25, 80], [10, 200], [150, 75],
+  [10, 70], [30, 150], [100, 15]
+]
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", 250)
+            .attr("height", 250)
+
+svg.selectAll("circle")
+   .data(data).enter()
+   .append("circle")
+   .attr("cx", function(d) {return d[0]})
+   .attr("cy", function(d) {return d[1]})
+   .attr("r", 8)
+   .attr("fill", function(d) {
+     return "rgb("+d[0]+","+d[1]+",0)"
+   })
+</script>
+</body>
+</html>
